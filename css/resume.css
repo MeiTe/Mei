@@ -1,0 +1,105 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/*header*/
+
+#header {
+	width: 100%;
+	min-height: 600px;
+	background-image: url(../img/self-introduction.png);
+	background-size: cover;
+}
+
+.navbar {
+	background-color: #000000;
+	opacity: 0.5;
+}
+
+.header-content {
+	margin-top: 15%;
+	
+}
+
+.header-content .img {
+	margin-top: 2%;
+}
+
+.chevron-down {
+	padding-top:10%;
+	padding-bottom: 5%;
+}
+
+
+/*about*/
+
+.content_about {
+	height: auto;
+	background-color: #281D24;
+	color: white;
+	text-align: center;
+}
+.hanedr-contented h2{
+	color: #C6C3C5;
+	font-weight: 300;
+	margin-top: 2.5em;
+}
+.hanedr-contented p{
+	color: gray;
+	line-height: 4;
+}
+.hanedr-contented span{
+	background: #8C868A;
+	height: 1px;
+	width: 20%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.year,.row-margin{
+	margin-top: 60px;
+}
+.year h4{
+	margin: 20px 0px 30px 0;
+}
+.year p{
+	width: 50%;
+	margin-left: 25%;
+}
+/*skill*/
+.content_skill{
+	background-color: #20191B;
+	height: auto;
+}
+.hanedr-contented{
+	text-align: center;
+}
+
+
+.circliful {
+    position: relative; 
+}
+
+.circle-text, .circle-info, .circle-text-half, .circle-info-half {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+}
+
+.circle-info, .circle-info-half {
+	color: #999;
+}
+
+.circliful .fa {
+	margin: -10px 3px 0 3px;
+	position: relative;
+	bottom: 4px;
+}
+.col-md-3 .myStat{
+	margin: 0 auto;
+}
+.myStat+h3{
+	color: white;
+}
