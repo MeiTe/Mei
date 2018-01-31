@@ -113,3 +113,13 @@
 	background-image: url(../img_resume/resume_footerbg.jpg);
 	background-size: cover;
 }
+#contact p{
+	color:#B5A9B7;
+	font-size: 18px;
+}
+#contact p span{
+	font-size: 20px;
+}
+input{
+	opacity: 0.3;
+}
