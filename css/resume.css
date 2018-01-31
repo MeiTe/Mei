@@ -10,7 +10,6 @@
 }
 #header {
 	width: 100%;
-	min-height: 600px;
 	background-image: url(../img_resume/self-introduction.png);
 	background-size: cover;
 }
@@ -24,19 +23,29 @@
 
 .header-content {
 	margin-top: 15%;
-	
 }
-
 .header-content .img {
 	margin-top: 2%;
 }
 
 .chevron-down {
 	padding-top:10%;
-	padding-bottom: 5%;
+	padding-bottom: 6%;
 }
-
-
+#myself h2{
+	color: #C5B7B8;
+}
+#myself h2 span{
+	color: #F1E9F2;
+	font-weight: bolder;
+	font-size: 1.2em;
+}
+#myself h3{
+	font-weight: bolder;
+}
+#myself p{
+	color: #F1E9F2;
+}
 /*about*/
 
 .content_about {
@@ -109,22 +118,22 @@
 /*portfolio*/
 .container-contact{
 	width: 100%;
-	min-height: 600px;
 	background-image: url(../img_resume/resume_footerbg.jpg);
 	background-size: cover;
 }
 #contact p{
 	color:#B5A9B7;
-	font-size: 18px;
+	font-size: 16px;
+	letter-spacing: 2px;
 }
 #contact p span{
-	font-size: 20px;
+	font-size: 18px;
 }
 #contact input,#contact textarea{
 	opacity: 0.7;
 	border-radius: 0px;
 }
-#contact input[type="text"],#contact input[type="email"],#contact textarea{
+#contact input[type="text"],#contact input[type="email"],#contact textarea,#contact input[type="submit"]{
 color: white;
 background: #170F12;
 outline: none;
