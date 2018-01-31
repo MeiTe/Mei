@@ -120,6 +120,14 @@
 #contact p span{
 	font-size: 20px;
 }
-input{
-	opacity: 0.3;
+#contact input,#contact textarea{
+	opacity: 0.7;
+	border-radius: 0px;
+}
+#contact input[type="text"],#contact input[type="email"],#contact textarea{
+color: white;
+background: #170F12;
+outline: none;
+border: solid 1.5px;
+border-color: #9A9A9A #EEEEEE #EEEEEE #9A9A9A;
 }
