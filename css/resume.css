@@ -14,10 +14,12 @@
 	background-image: url(../img/self-introduction.png);
 	background-size: cover;
 }
-
+.icon-bar{
+	background-color: white;
+}
 .navbar {
 	background-color: #000000;
-	opacity: 0.3;
+	opacity: 0.5;
 }
 
 .header-content {
@@ -59,7 +61,7 @@
 	display: inline-block;
 	vertical-align: middle;
 }
-.year,.row-margin{
+.year{
 	margin-top: 60px;
 }
 .year h4{
@@ -82,7 +84,6 @@
 .circliful {
     position: relative; 
 }
-
 .circle-text, .circle-info, .circle-text-half, .circle-info-half {
     width: 100%;
     position: absolute;
@@ -105,3 +106,4 @@
 .myStat+h3{
 	color: white;
 }
+/*portfolio*/
