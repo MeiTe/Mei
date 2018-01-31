@@ -11,7 +11,7 @@
 #header {
 	width: 100%;
 	min-height: 600px;
-	background-image: url(../img/self-introduction.png);
+	background-image: url(../img_resume/self-introduction.png);
 	background-size: cover;
 }
 .icon-bar{
@@ -107,3 +107,9 @@
 	color: white;
 }
 /*portfolio*/
+.container-contact{
+	width: 100%;
+	min-height: 600px;
+	background-image: url(../img_resume/resume_footerbg.jpg);
+	background-size: cover;
+}
