@@ -10,7 +10,7 @@
 }
 #header {
 	width: 100%;
-	background-image: url(../img_resume/self-introduction.png);
+	background-image: url(../../img/img_resume/self-introduction.png);
 	background-size: cover;
 }
 .icon-bar{
@@ -118,7 +118,7 @@
 /*portfolio*/
 .container-contact{
 	width: 100%;
-	background-image: url(../img_resume/resume_footerbg.jpg);
+	background-image: url(../../img/img_resume/resume_footerbg.jpg);
 	background-size: cover;
 }
 #contact p{
