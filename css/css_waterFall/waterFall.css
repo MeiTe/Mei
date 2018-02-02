@@ -15,15 +15,26 @@
 .pic {
 	margin: 20px 20px 0 0;
 }
+
 .pic img {
 	width: 200px;
 	height: auto;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
-.pic:hover{
+
+.pic:hover {
 	opacity: 0.6;
 }
+
 .text {
 	color: gray;
 	width: 200px;
 	padding: 20px;
+	border-top: none;
+	border-left: 1px solid gainsboro;
+	border-right: 1px solid gainsboro;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow: 0px 2px 0px gainsboro;
 }

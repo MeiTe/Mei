@@ -183,7 +183,8 @@ function waterfall() {
 
 function checkScrollSlide() {
 	var $lsatBox = $("#main>div").last();
-	var lastBoxDis = $lsatBox.offset().top + Math.floor($lsatBox.outerHeight() / 2);
+	//var lastBoxDis = $lsatBox.offset().top + Math.floor($lsatBox.outerHeight() / 2);
+	var lastBoxDis = $lsatBox.offset().top + $lsatBox.outerHeight();
 	var scrollTop = $(window).scrollTop();
 	var documentH = $(window).height();
 	return(lastBoxDis < scrollTop + documentH) ? true : false;
