@@ -144,15 +144,6 @@ $(window).on('load', function() {
 		]
 	};
 
-	/*	<div class="row" id="rowMain">
-						<div class="box">
-							<div class="pic">
-								<img src="../../img/img_waterFall/3.jpg" />
-							</div>
-							<div class="text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?
-							</div>
-						</div>*/
 	$(window).on('scroll', function() {
 		if(checkScrollSlide) {
 			$.each(dataInt.data, function(key, value) {
@@ -160,7 +151,7 @@ $(window).on('load', function() {
 				var oPic = $("<div>").addClass("pic").appendTo($(oBox));
 				var oText = $("<div>").addClass("text").insertAfter($(oPic));
 				$("<img>").attr("src", "../../img/img_waterFall/" + $(value).attr("src")).appendTo($(oPic));
-				$("<p>").attr("text", $(value).attr("text")).appendTo($(oText));
+				oText.text($(value).attr("text"));
 			});
 		}
 		waterfall();
