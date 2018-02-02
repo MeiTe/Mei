@@ -8,8 +8,8 @@
 }
 
 .box {
-	padding: 10px 0 0 10px;
-	margin: 15px 0 0 15px;
+	/*padding: 10px 0 0 10px;
+	margin: 15px 0 0 15px;*/
 	border: 1px solid #CCC;
 	box-shadow: 0 0 5px #CCC;
 	float: left;
@@ -17,7 +17,8 @@
 }
 
 .pic {
-	padding-right: 10px;
+	/*padding-right: 10px;*/
+	margin: 15px 15px 0 0;
 }
 .pic img {
 	width: 250px;
