@@ -1,0 +1,33 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#main {
+	position: relative;
+}
+
+.box {
+	padding: 10px 0 0 10px;
+	margin: 15px 0 0 15px;
+	border: 1px solid #CCC;
+	box-shadow: 0 0 5px #CCC;
+	float: left;
+	border-radius: 5px;
+}
+
+.pic {
+	padding-right: 10px;
+}
+.pic img {
+	width: 250px;
+	height: auto;
+}
+.pic:hover{
+	opacity: 0.6;
+}
+.text {
+	color: gray;
+	width: 200px;
+	padding: 20px;
+}
