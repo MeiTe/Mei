@@ -13,11 +13,11 @@
 }
 
 .pic {
-	margin: 20px 20px 0 0;
+	margin: 25px 25px 0 0;
 }
 
 .pic img {
-	width: 200px;
+	width: 250px;
 	height: auto;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -29,7 +29,7 @@
 
 .text {
 	color: gray;
-	width: 200px;
+	width: 250px;
 	padding: 20px;
 	border-top: none;
 	border-left: 1px solid gainsboro;
