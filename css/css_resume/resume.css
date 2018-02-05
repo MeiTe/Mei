@@ -20,7 +20,10 @@
 	background-color: #000000;
 	opacity: 0.5;
 }
-
+#header-nav li a:hover{
+	color: #000000;
+	font-weight: 300;
+}
 .header-content {
 	margin-top: 15%;
 }
