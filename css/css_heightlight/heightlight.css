@@ -1,0 +1,98 @@
+
+/*线条渐变*/
+.se-navbar-top-colour {
+    position: relative;
+    /*max-width: 1800px;*/
+    margin: 0 auto;
+}
+
+.se-navbar-top-colour:before,
+.se-navbar-top-colour:after {
+    content: " ";
+    display: table;
+}
+
+.se-navbar-top-colour:after {
+    clear: both;
+}
+
+.se-navbar-top-colour:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: -webkit-linear-gradient(right, #29abe2 40%, #6fbe44, #caeefa);
+    background-image: -o-linear-gradient(right, #29abe2 40%, #6fbe44, #caeefa);
+    background-image: linear-gradient(to right, #29abe2 40%, #6fbe44, #caeefa);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6fbe44', endColorstr='#ffcaeefa', GradientType=1);
+}
+
+.width-percent50 {
+    width: 50% !important;
+}
+
+.width-percent90 {
+    width: 90% !important;
+}
+
+.width-percent95 {
+    width: 95% !important;
+}
+
+.pagination li a {
+    color: gray;
+}
+
+.left-border-graystroke {
+    border-left: 1px solid #E6E7E8;
+}
+
+.right-border-graystroke {
+    border-right: 1px solid #E6E7E8;
+}
+
+.left-border-charcoal {
+    border-left: 2px solid #58595B;
+}
+
+.right-border-charcoal {
+    border-right: 2px solid #58595B;
+}
+
+.bottom-border-graystroke {
+    border-bottom: 1px solid #E6E7E8;
+}
+
+.topborder-top {
+    border-top: none;
+    position: relative;
+    top: 5px;
+}
+
+.tableshow {
+    display: table-cell;
+    float: none;
+    width: 456px;
+}
+
+#matchViewLeft {
+    width: 1920px;
+    min-width: 1140px;
+}
+
+#targetJobAll .row {
+    display: table-row;
+}
+
+.has-highlight > .form-control {
+    position: relative;
+    border-left-color: #007DBC;
+    border-left-width: 4px;
+}
+.bg-bluebright{
+    background-color:#29ABE2;
+}
