@@ -15,9 +15,9 @@
 	<body>
 		<div class="container margin-top60">
             <div class="margin-top50 margin-right50 padding-right50">
-                    <nav class="filterbar sa-navbar-top-colour">
-                        <ul class="navbar-autocollapse-nav clearfix bottom-border-graystroke padding-top5">
-                            <li class="border-top-none border-bottom-none margin-top5 width-percent30">
+                    <nav class="nav filterbar">
+                        <ul class="nbottom-border-graystroke">
+                            <li class="border-top-none border-bottom-none">
                                 <h4 class="filterbar-filterheading small text-uppercase" id="">Highlight</h4>
                                 <div class="btn-group btn-group-sm filterbar-filtergroup" role="group" aria-labeledby="">
                                     <button type="button" class="btn btn-default active" onclick="noneHigh(this)">None</button>
@@ -27,18 +27,18 @@
                                     <button type="button" class="btn btn-default" onclick="DifferentHigh(this)">Different Factors</button>
                                 </div>
                             </li>
-                            <li class="border-top-none border-bottom-none margin-top5 width-percent10">
+                            <li class="border-top-none border-bottom-none">
                                 <h4 class="filterbar-filterheading small text-uppercase">Blank items</h4>
                                 <div class="btn-group btn-group-sm filterbar-filtergroup" role="group">
                                     <button type="button" class="btn btn-default active" onclick="showFactors(this)">Show</button>
                                     <button type="button" class="btn btn-default" onclick="hideFactors(this)">Hide</button>
                                 </div>
                             </li>
-                            <li class="border-top-none border-bottom-none margin-top5 border-right-none">
+                            <li class="border-top-none border-bottom-none border-right-none">
                                 <h4 class="filterbar-filterheading small text-uppercase">display</h4>
                                 <div class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="itemtsNum"></span> items<span class="caret"></span></a>
-                                    <ul class="dropdown-menu filters-multi family-chooser" data-sa-dropdown-keep>
+                                    <ul class="dropdown-menu filters-multi family-chooser">
                                         <li class="filters-header row">
                                             <div class="col-xs-4">
                                                 <a href="#"><span class="icon-remove icon-remove-clearall"></span>Clear all</a>
@@ -134,7 +134,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="clearfix bottom-border-graystroke">
+                <div class="clearfix bottom-border-graystroke padding-bottom20 padding-top10">
                     <span class="text-size16 line-height70 text-gray">Compensible Factors</span>
                     <a class="text-size12 line-height70 padding-left30" href="#collapseParent" id="expandAllBtn" onclick="expandAllOrCloseAll()">Collapse All</a>
                 </div>
@@ -147,11 +147,27 @@
                             </p>
                         </div>
 
-                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke">
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger1
+                                    <span class="radioradio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger1
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger2
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger3
                                 </label>
                             </div>
                         </div>
@@ -159,7 +175,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger2
+                                    <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger4
                                 </label>
                             </div>
                         </div>
@@ -167,7 +183,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger3
+                                    <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger5
                                 </label>
                             </div>
                         </div>
@@ -175,7 +191,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger4
+                                    <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger6
                                 </label>
                             </div>
                         </div>
@@ -183,7 +199,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger5
+                                    <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger7
                                 </label>
                             </div>
                         </div>
@@ -191,7 +207,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger6
+                                    <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger8
                                 </label>
                             </div>
                         </div>
@@ -199,23 +215,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger7
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger8
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="manager" id="" value="">
-                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger9
+                                    <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger9
                                 </label>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                     <div class="row" id="skillAll">
                         <div class="col-lg-3 tableshow jobLeft">
                             <div class="form-group">
-                                <a href="#skills" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none" role="button" data-toggle="collapse" aria-expanded="true">SKILLS</a>
+                                <a href="#skills" class="btn btn-link border-none" role="button" data-toggle="collapse" aria-expanded="true">SKILLS</a>
                             </div>
                             <div id="skills" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
                                 <div class="form-horizontal">
@@ -292,7 +292,7 @@
                     <div class="row" id="experienceAll">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group">
-                                <a href="#experience" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">experience</a>
+                                <a href="#experience" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">experience</a>
                             </div>
                             <div id="experience" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
                                 <div class="form-horizontal">
@@ -346,7 +346,7 @@
                     <div class="row" id="certificateAll">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group">
-                                <a href="#certificate" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">certificate</a>
+                                <a href="#certificate" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">certificate</a>
                             </div>
                             <div id="certificate" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
                                 <div class="form-horizontal">
@@ -390,7 +390,7 @@
                     <div class="row" id="licenseAll">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group">
-                                <a href="#license" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">license</a>
+                                <a href="#license" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">license</a>
                             </div>
                             <div id="license" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
                                 <div class="form-horizontal">
@@ -433,7 +433,7 @@
                     <div class="row" id="majorAll">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group">
-                                <a href="#major" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">major</a>
+                                <a href="#major" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">major</a>
                             </div>
                             <div id="major" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
                                 <div class="form-horizontal">
@@ -472,7 +472,7 @@
                     <div class="row" id="degreeAll">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group">
-                                <a href="#degree" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">degree</a>
+                                <a href="#degree" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">degree</a>
                             </div>
                             <div id="degree" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
                                 <div class="form-horizontal">
@@ -510,7 +510,7 @@
                     <div class="row" id="report_toAll">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group">
-                                <a href="#report_to" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">report to</a>
+                                <a href="#report_to" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">report to</a>
                             </div>
                             <div id="report_to" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
                                 <div class="form-horizontal">
@@ -541,25 +541,25 @@
                     <div class="row">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group margin-bottom10">
-                                <a href="#manager" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">manager</a>
+                                <a href="#manager" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">manager</a>
                             </div>
                             <div id="manager" class="forExpandAll collapse in form-horizontal padding-left20" aria-expanded="true" style="">
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="manager" id="" value="" checked>
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Yes
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Yes
                                     </label>
                                 </div>
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="manager" id="" value="">
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>No
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>No
                                     </label>
                                 </div>
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="manager" id="" value="">
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
                                     </label>
                                 </div>
                             </div>
@@ -581,25 +581,25 @@
                     <div class="row">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group margin-bottom10">
-                                <a href="#shift" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">shift</a>
+                                <a href="#shift" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">shift</a>
                             </div>
                             <div id="shift" class="forExpandAll collapse in padding-left20 form-horizontal" aria-expanded="true" style="">
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="shift" id="" value="" checked>
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Yes
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Yes
                                     </label>
                                 </div>
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="shift" id="" value="">
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>No
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>No
                                     </label>
                                 </div>
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="shift" id="" value="">
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
                                     </label>
                                 </div>
                             </div>
@@ -619,25 +619,25 @@
                     <div class="row">
                         <div class="col-lg-3 tableshow padding-top20">
                             <div class="form-group margin-bottom10">
-                                <a href="#hazardous" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">hazardous</a>
+                                <a href="#hazardous" class="btn btn-link border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">hazardous</a>
                             </div>
                             <div id="hazardous" class="forExpandAll collapse in padding-left20 form-horizontal" aria-expanded="true" style="">
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="hazardous" id="" value="" checked>
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Yes
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Yes
                                     </label>
                                 </div>
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="hazardous" id="" value="">
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>No
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>No
                                     </label>
                                 </div>
                                 <div class="col-md-4">
                                     <label>
                                         <input type="radio" name="hazardous" id="" value="">
-                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
+                                        <span class="radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
                                     </label>
                                 </div>
                             </div>

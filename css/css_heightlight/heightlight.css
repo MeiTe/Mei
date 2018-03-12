@@ -31,6 +31,13 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6fbe44', endColorstr='#ffcaeefa', GradientType=1);
 }
 
+.width-percent10 {
+    width: 10% !important;
+}
+.width-percent30 {
+    width: 30% !important;
+}
+
 .width-percent50 {
     width: 50% !important;
 }
@@ -38,11 +45,9 @@
 .width-percent90 {
     width: 90% !important;
 }
-
 .width-percent95 {
     width: 95% !important;
 }
-
 .pagination li a {
     color: gray;
 }
@@ -100,4 +105,7 @@
     pointer-events: none;
     cursor: default;
     opacity: 0.6;
+}
+.padding-left40{
+    padding-left:40px;
 }
