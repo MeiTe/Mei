@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/CommonSizeStyle.css" />
+		<link rel="stylesheet" href="../../css/css_heightlight/heightlight.css" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../../js/tableLayout.js"></script>
+		<title>display属性里面的table属性布局以及相匹配</title>
+	</head>
+
+	<body>
+		<div class="container margin-top60">
+            <div class="margin-top50 margin-right50 padding-right50">
+                    @*<nav class="navbar-autocollapse filterbar sa-navbar-top-colour">*@
+                    <nav class="filterbar sa-navbar-top-colour">
+                        <ul class="navbar-autocollapse-nav clearfix bottom-border-graystroke padding-top5">
+                            <li class="border-top-none border-bottom-none margin-top5 width-percent30">
+                                <h4 class="filterbar-filterheading small text-uppercase" id="">Highlight</h4>
+                                <div class="btn-group btn-group-sm filterbar-filtergroup" role="group" aria-labeledby="">
+                                    <button type="button" class="btn btn-default active" onclick="noneHigh(this)">None</button>
+                                    <button type="button" class="btn btn-default" onclick="keyWordsHigh(this)">Keywords</button>
+                                    <button type="button" class="btn btn-default" onclick="EnteredHigh(this)">Entered</button>
+                                    <button type="button" class="btn btn-default" onclick="SameHigh(this)">Same Factors</button>
+                                    <button type="button" class="btn btn-default" onclick="DifferentHigh(this)">Different Factors</button>
+                                </div>
+                            </li>
+                            <li class="border-top-none border-bottom-none margin-top5 width-percent10">
+                                <h4 class="filterbar-filterheading small text-uppercase">Blank items</h4>
+                                <div class="btn-group btn-group-sm filterbar-filtergroup" role="group">
+                                    <button type="button" class="btn btn-default active" onclick="showFactors(this)">Show</button>
+                                    <button type="button" class="btn btn-default" onclick="hideFactors(this)">Hide</button>
+                                </div>
+                            </li>
+                            <li class="border-top-none border-bottom-none margin-top5 border-right-none">
+                                <h4 class="filterbar-filterheading small text-uppercase">display</h4>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="itemtsNum"></span> items<span class="caret"></span></a>
+                                    <ul class="dropdown-menu filters-multi family-chooser" data-sa-dropdown-keep>
+                                        <li class="filters-header row">
+                                            <div class="col-xs-4">
+                                                <a href="#"><span class="icon-remove icon-remove-clearall"></span>Clear all</a>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <button class="btn btn-default btn-sm">Cancel</button>
+                                                <button class="btn btn-cta btn-sm"><span class="icon-check"></span>Apply</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h4 class="font-semibold padding-left5">Target job</h4>
+                                        </li>
+                                        <li class="checkbox filters-selected">
+                                            <label class="padding-left5">
+                                                <input value="" type="checkbox" checked />
+                                                <span></span>
+                                                <span class="margin-left20">Compensible factors</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <h4 class="font-semibold padding-left5">Potential Job Matches</h4>
+                                        </li>
+                                        <li id="jobMatches">
+                                            <ul class="padding-left5">
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger1</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger2</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger3</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger4</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger5</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger6</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger7</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger8</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox filters-selected">
+                                                    <label class="padding-left0">
+                                                        <input value="" type="checkbox" />
+                                                        <span></span>
+                                                        <span class="margin-left20">Accountant Manger9</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="clearfix bottom-border-graystroke">
+                    <span class="text-size16 line-height70 text-gray">Compensible Factors</span>
+                    <a class="text-size12 line-height70 padding-left30" href="#collapseParent" id="expandAllBtn" onclick="expandAllOrCloseAll()">Collapse All</a>
+                </div>
+                <div id="targetJobAll" class="width-percent95 ">
+                    <div class="row" id="targetJob">
+                        <div class="col-lg-3 tableshow">
+                            <p>
+                                <span class="margin-top0 h3">Target Job</span>
+                                <span class="padding-left30 text-size16 text-black">PT user name</span>
+                            </p>
+                        </div>
+
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger1
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger2
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger3
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger4
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger5
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger6
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger7
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger8
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-top20 left-border-graystroke hide">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="manager" id="" value="">
+                                    <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Accountant Manger9
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row" id="skillAll">
+                        <div class="col-lg-3 tableshow jobLeft">
+                            <div class="form-group">
+                                <a href="#skills" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none" role="button" data-toggle="collapse" aria-expanded="true">SKILLS</a>
+                            </div>
+                            <div id="skills" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="Keywords of finance,financial methods,tools">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="Entered of finance,financial methods,tools">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" name="" id="" value="saw America as bigger than the sum">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" name="" id="" value="After the US invasion in 2001" disabled>
+                                        </div>
+                                        <a href="javascript:;" class="icon-add text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="addBlankItem(this)"><span class="sr-only">add</span></a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow left-border-graystroke padding-left50">
+                            <h6 class="text-uppercase">Skills</h6>
+                            <p>
+                                Keywords of finance,financial methods,tools information are protected you should always close your browser. This is the safest practice and one you should always engage in.
+
+                            </p>
+                            <p>
+                                Always logout! they have finished their Business they can just continue on about the Internet without logging out.
+                            </p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 left-border-graystroke">
+                            <h6 class="text-uppercase">Skills</h6>
+                            <p>
+                                Entered of finance,financial personal information are protected you should always close your browser. This is the safest practice and one you should always engage in.
+                            </p>
+                            <p>
+                                Always logout! they have finished their Business they can just continue on about the Internet without logging out.
+                            </p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 left-border-graystroke">
+                            <h6 class="text-uppercase">Skills</h6>
+                            <p>
+                                Personal information are protected you should  always close your browser. This is the safest practice and one you should always engage in.
+                            </p>
+                            <p>
+                                Always logout! they have saw America as bigger than the sum tools Business they can just continue on about the Internet without logging out.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row" id="experienceAll">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group">
+                                <a href="#experience" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">experience</a>
+                            </div>
+                            <div id="experience" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="3 at least">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="3 at least">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 tableshow padding-left50 left-border-graystroke">
+                            <h6 class="text-uppercase">Experience</h6>
+                            <p>
+                                protected you should always close your browser. This is the safest practice and one you should always engage in.
+                            </p>
+                            <p>
+                                Because of this you should always logout 3 at least.
+                            </p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">Experience</h6>
+                            <p>
+                                protected you should always close your browser. This is the safest practice and one you should always engage in.
+                            </p>
+                            <p>
+                                Because of this you should always logout.
+                            </p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">Experience</h6>
+                            <p>
+                                protected you should always close your browser. This is the safest practice and one you should always engage in.
+                            </p>
+                            <p>
+                                Because of this you should always logout.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row" id="certificateAll">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group">
+                                <a href="#certificate" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">certificate</a>
+                            </div>
+                            <div id="certificate" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="IPC Intellectual Keywords Property Protextion Certification">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="IPC Intellectual Keywords">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">Experience</h6>
+                            <p>
+                                Certified Public Accountant(CPA)
+                            </p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">Experience</h6>
+                            <p>
+                                IPC Intellectual Keywords(CPA)
+                            </p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">Experience</h6>
+                            <p>
+                                Certified Public Accountant(CPA)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row" id="licenseAll">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group">
+                                <a href="#license" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">license</a>
+                            </div>
+                            <div id="license" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="IPC Entered Intellectual">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="Property Protextion Certification">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">license</h6>
+                            <p></p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">license</h6>
+                            <p>
+                                Certified Public Accountant(CPA)
+                            </p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">license</h6>
+                            <p>
+                                IPC Entered Intellectual
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="row" id="majorAll">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group">
+                                <a href="#major" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">major</a>
+                            </div>
+                            <div id="major" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="major">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="major">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">major</h6>
+                            <p>Mother plays a crucial role in her child’s life. She can either help you become successful or bring you down when you crave support. </p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">major</h6>
+                            <p>While a strong mother empowers her major child.</p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">major</h6>
+                            <p>A weak mom is always afraid to take a big step and show that gender is not a sign of weakness.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row" id="degreeAll">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group">
+                                <a href="#degree" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">degree</a>
+                            </div>
+                            <div id="degree" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="Bachelor">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="Bachelor">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">degree</h6>
+                            <p>Bachelors</p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">degree</h6>
+                            <p>Bachelors</p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">degree</h6>
+                            <p>Bachelors</p>
+                        </div>
+                    </div>
+
+                    <div class="row" id="report_toAll">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group">
+                                <a href="#report_to" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">report to</a>
+                            </div>
+                            <div id="report_to" class="forExpandAll collapse in padding-left20" aria-expanded="true" style="">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control " name="" id="" value="CEO">
+                                        </div>
+                                        <a href="javascript:;" class="icon-remove text-gray margin-top10 margin-right10 pull-right display-inline-bolck" onclick="removeFormGroupInFactors(this)"><span class="sr-only">remove</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">report to</h6>
+                            <p>dircetor or head of a unit/depart-ment</p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">report to</h6>
+                            <p>dircetor or head of a unit/depart-ment</p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">report to</h6>
+                            <p>dircetor or head CEO of a unit/depart-ment</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group margin-bottom10">
+                                <a href="#manager" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">manager</a>
+                            </div>
+                            <div id="manager" class="forExpandAll collapse in form-horizontal padding-left20" aria-expanded="true" style="">
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="manager" id="" value="" checked>
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="manager" id="" value="">
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>No
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="manager" id="" value="">
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">manager</h6>
+                            <p>Yes</p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">manager</h6>
+                            <p>Yes</p>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">manager</h6>
+                            <p>Yes</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group margin-bottom10">
+                                <a href="#shift" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">shift</a>
+                            </div>
+                            <div id="shift" class="forExpandAll collapse in padding-left20 form-horizontal" aria-expanded="true" style="">
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="shift" id="" value="" checked>
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="shift" id="" value="">
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>No
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="shift" id="" value="">
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">shift</h6>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">shift</h6>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">shift</h6>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 tableshow padding-top20">
+                            <div class="form-group margin-bottom10">
+                                <a href="#hazardous" class="btn btn-link sa-btn-collapse sa-btn-collapse-b border-none text-uppercase" role="button" data-toggle="collapse" aria-expanded="true">hazardous</a>
+                            </div>
+                            <div id="hazardous" class="forExpandAll collapse in padding-left20 form-horizontal" aria-expanded="true" style="">
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="hazardous" id="" value="" checked>
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="hazardous" id="" value="">
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>No
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="radio" name="hazardous" id="" value="">
+                                        <span class="sa-radio margin-top0 margin-left0" style="left:0px;"></span>Unknown
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">hazardous</h6>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">hazardous</h6>
+                        </div>
+                        <div class="col-lg-3 tableshow padding-left50 padding-top20 left-border-graystroke">
+                            <h6 class="text-uppercase">hazardous</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		</div>
+
+	</body>
+
+</html>
