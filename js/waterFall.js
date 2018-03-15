@@ -1,10 +1,7 @@
 $(window).on('load', function() {
 	waterfall();
 	var dataInt = {
-		"data": [{
-				"src": "3.jpg",
-				"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"
-			},
+		"data": [
 			{
 				"src": "4.jpg",
 				"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"
