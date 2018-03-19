@@ -68,7 +68,8 @@ function EnteredHigh(obj) {
     $(obj).siblings().removeClass("active");
     $("#targetJobAll p").removeClass("bg-bluebright bg-none");
 }
-function SameHigh(obj) {
+//方法一
+/*function SameHigh(obj) {
     $("#targetJobAll p").removeClass("bg-bluebright bg-none");
     //skills
     $("#skills input").each(function (index, value) {
@@ -243,7 +244,58 @@ function DifferentHigh(obj) {
     $(obj).addClass("active");
     $(obj).siblings().removeClass("active");
     $("#targetJobAll input[type='text']").parent().removeClass("has-highlight");
+}*/
+//升级的方法
+//Same Factors
+function SameHigh(obj) {
+    $("#targetJobAll p").removeClass("bg-bluebright bg-none");
+    $("#targetJobAll .row").each(function (index, value) {
+        var $objThis = $(this);
+        var $DivInputText = $objThis.find("input[type='text']");
+        var $DivLabelText = $objThis.find("p");
+        $DivInputText.each(function (index, value) {
+            var strInputVal = $(this).val();
+            $DivLabelText.each(function (index, obj) {
+                var strFirst = $(this).html();
+                var strLast = strFirst.replace(new RegExp(strInputVal, 'g'), "<span class='bg-bluebright'>" + strInputVal + "</span>");
+                $(obj).html(strLast);
+            });
+            $(".left-border-graystroke p span").parent().addClass("bg-bluebright");
+            $(".left-border-graystroke p span").replaceWith(strInputVal);
+        });
+    });
+    $(obj).addClass("active");
+    $(obj).siblings().removeClass("active");
+    $("#targetJobAll input[type='text']").parent().removeClass("has-highlight");
 }
+
+//Different Factors
+function DifferentHigh(obj) {
+    $("#targetJobAll p").removeClass("bg-bluebright bg-none");
+    $("#targetJobAll .row").each(function (index, value) {
+        var $objThis = $(this);
+        var $DivInputText = $objThis.find("input[type='text']");     
+        $DivInputText.each(function (index, value) {
+            var strText = $(this).val();
+            var $DivLabelText = $objThis.find("p[class!='bg-none']");
+            $DivLabelText.each(function (index, obj) {
+                var strContentText = $(this).text();
+                if (strContentText.indexOf(strText) >= 0) {
+                    $(this).addClass("bg-none");
+                    $(this).removeClass("bg-bluebright");
+                } else {
+                    $(this).addClass("bg-bluebright");
+                }
+            });
+        });
+    });
+    $(obj).addClass("active");
+    $(obj).siblings().removeClass("active");
+    $("#targetJobAll input[type='text']").parent().removeClass("has-highlight");
+}
+
+
+
 //show or hide
 function showFactors(obj) {
     $(obj).addClass("active");
